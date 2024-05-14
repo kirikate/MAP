@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAP.Resources.DefaultTheme">
+
+	<Color x:Key="ButtonColor">#404040</Color>
+	<Color x:Key="TextColor">WhiteSmoke</Color>
+	<Color x:Key="GridColor">#555555</Color>
+
+	<x:String x:Key="Theme">Default</x:String>
+</ResourceDictionary>

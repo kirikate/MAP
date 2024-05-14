@@ -1,4 +1,5 @@
 using MAP.Helpers;
+using MAP.Services;
 using MAP.ViewModels;
 
 namespace MAP.Views;
@@ -9,6 +10,8 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
+		IThemeService ts = ServiceHelper.ServiceProvider.GetService<IThemeService>();
+		ts.SetCurrentTheme(ts.GetCurrentTheme());
 		vm = ServiceHelper.ServiceProvider.GetRequiredService<MainPageViewModel>();
 	}
 	protected override void OnSizeAllocated(double width, double height)

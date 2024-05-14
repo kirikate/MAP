@@ -5,9 +5,25 @@
 	<Style TargetType="Button">
 		<Setter Property="BorderWidth" Value="1"/>
 		<Setter Property="BorderColor" Value="Black"/>
-		<Setter Property="BackgroundColor" Value="White"/>
 		<Setter Property="CornerRadius" Value="1"/>
-		<Setter Property="TextColor" Value="Black"/>
 		<Setter Property="FontSize" Value="20"/>
+		<Setter Property="BackgroundColor" Value="{DynamicResource ButtonColor}"/>
+		<Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+	</Style>
+
+
+	<Style TargetType="Grid">
+		<Setter Property="BackgroundColor" Value="{DynamicResource GridColor}"/>
+	</Style>
+
+	<Style TargetType="Label">
+		<Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+		<Setter Property="BackgroundColor" Value="Transparent"/>
+	</Style>
+
+	<Style TargetType="NavigationPage">
+		<Setter Property="BackgroundColor" Value="{DynamicResource ButtonColor}"/>
+		<Setter Property="BarBackgroundColor" Value="{DynamicResource ButtonColor}"/>
+		<Setter Property="BarTextColor" Value="{DynamicResource TextColor}"/>
 	</Style>
 </ResourceDictionary>

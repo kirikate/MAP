@@ -13,17 +13,29 @@
 			<RowDefinition Height="90"/>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
+		<Grid Grid.Row="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
 
-		<Label Grid.Row="0" Margin="20" Text="{Binding ExpressionText}" FontSize="16">
-			<Label.Triggers>
-				<DataTrigger TargetType="Label" Binding="{Binding IsValidExpression}" Value="false">
-					<Setter Property="TextColor" Value="Red"/>
-				</DataTrigger>
-				<DataTrigger TargetType="Label" Binding="{Binding IsValidExpression}" Value="true">
-					<Setter Property="TextColor" Value="Black"/>
-				</DataTrigger>
-			</Label.Triggers>
-		</Label>
+			<HorizontalStackLayout>
+				<Label Grid.Row="0" Margin="20" Text="{Binding ExpressionText}" FontSize="16">
+					<Label.Triggers>
+						<DataTrigger TargetType="Label" Binding="{Binding IsValidExpression}" Value="false">
+							<Setter Property="TextColor" Value="Red"/>
+						</DataTrigger>
+						<DataTrigger TargetType="Label" Binding="{Binding IsValidExpression}" Value="true">
+							<Setter Property="TextColor" Value="Black"/>
+						</DataTrigger>
+					</Label.Triggers>
+				</Label>
+				<Button Text="Theme" Command="{Binding ChangeThemeCommand}" BackgroundColor="{DynamicResource ButtonColor}"/>
+			</HorizontalStackLayout>
+
+			<Label Grid.Row="1"  Text="{Binding ErrorText}"/>
+
+		</Grid>
 
 		<Grid Grid.Row="1">
 			<Grid.ColumnDefinitions>
@@ -43,21 +55,34 @@
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
 
-			<Button Text="MC" Grid.Row="0" Grid.Column="0"/>
-			<Button Text="(" Grid.Row="0" Grid.Column="1"
-			Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}"/>
-			<Button Text=")" Grid.Row="0" Grid.Column="2"
-			Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}"/>
+			<Button Text="PUSH" Grid.Row="0" Grid.Column="0"
+				Command="{Binding PushCommand}"/>
+			<Button Text="POP" Grid.Row="0" Grid.Column="1"
+				Command="{Binding PopCommand}"/>
+			<Button Text="C" Grid.Row="0" Grid.Column="2"
+				Command="{Binding ClearCommand}"/>
 
-			<Button Text="C" Grid.Row="1" Grid.Column="0"
-			Command="{Binding ClearCommand}"/>
+			<Button Text="Lab2" Grid.Row="1" Grid.Column="0"
+				Command="{Binding Lab2Command}"/>
 			<Button Text="/" Grid.Row="1" Grid.Column="1" 
-			Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}"/>
+				Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}" 
+				BackgroundColor="{DynamicResource ButtonColor}"/>
 			<Button Text="*" Grid.Row="1" Grid.Column="2"
 			Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}"/>
 			
 			<Button Text="^" Grid.Row="2" Grid.Column="2"
 			Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}"/>
+			<Button Text="SIN(" Grid.Row="2" Grid.Column="1"
+			Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}"/>
+			<Button Text="COS(" Grid.Row="2" Grid.Column="0"
+			Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}"/>
+
+			<Button Text="(" Grid.Row="3" Grid.Column="0"
+				Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}"/>
+			<Button Text=")" Grid.Row="3" Grid.Column="1"
+				Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}"/>
+			<Button Text="LN(" Grid.Row="3" Grid.Column="2"
+				Command="{Binding InputCommand}" CommandParameter="{Binding Source={RelativeSource Self}}"/>
 
 
 

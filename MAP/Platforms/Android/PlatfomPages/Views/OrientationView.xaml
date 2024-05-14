@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAP.Platforms.Android.PlatfomPages.Views.OrientationView"
+             Title="OrientationView"
+			 xmlns:vm="clr-namespace:MAP.Platforms.Android.PlatfomPages.ViewModels"
+			 HeightRequest="400"
+			 WidthRequest="400"
+			 BackgroundColor="{DynamicResource GridColor}">
+	<VerticalStackLayout>
+			 <!--x:DataType="{x:Type vm:OrientationViewModel}"-->
+		<HorizontalStackLayout>
+			<Label Text="{Binding X}"/>
+			<Label Text=" "/>
+			<Label Text="{Binding Y}"/>
+			<Label Text=" "/>
+			<Label Text="{Binding Z}"/>
+		</HorizontalStackLayout>
+		<Label Text="{Binding Value}"/>
+		<Slider x:Name="slider" Minimum="0" Maximum="32767" Value="{Binding Value, Mode=TwoWay}"/>
+		<Button Text="Coco" Command="{Binding ButtonCommand}"/>
+	</VerticalStackLayout>
+</ContentPage>

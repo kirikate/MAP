@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAP.Resources.SecondTheme">
+
+	<Color x:Key="ButtonColor">#AEE1F0</Color>
+	<Color x:Key="TextColor">Black</Color>
+	<Color x:Key="GridColor">#8CF9D4</Color>
+
+	<x:String x:Key="Theme">Second</x:String>
+</ResourceDictionary>

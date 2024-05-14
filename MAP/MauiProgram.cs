@@ -9,7 +9,7 @@ namespace MAP
 {
 	public static class MauiProgram
 	{
-		public static MauiApp CreateMauiApp()
+		public static MauiApp CreateMauiApp(Func<IServiceProvider, object?, Page>? factory = null, Type? vmPopupType = null)
 		{
 			var builder = MauiApp.CreateBuilder();
 			builder
@@ -26,6 +26,14 @@ namespace MAP
 #endif
 			builder.Services.AddTransient<MainPageViewModel>();
 			builder.Services.AddTransient<ICalculatorService, CalculatorService>();
+
+			if (factory != null)
+			{
+				builder.Services.AddKeyedTransient<Page>("Lab2Popup", factory);
+				builder.Services.AddTransient(vmPopupType);
+			}
+
+			builder.Services.AddSingleton<IThemeService, ThemeService>();
 
 			MauiApp app = builder.Build();
 			ServiceHelper.SetServiceProvider(app.Services);

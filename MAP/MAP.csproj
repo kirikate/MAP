@@ -68,6 +68,7 @@
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="Google.Cloud.Firestore" Version="3.7.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
@@ -78,6 +79,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Platforms\Android\PlatfomPages\Views\OrientationView.xaml.cs">
+	    <DependentUpon>OrientationView.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\MainPageHorizontal.View.xaml.cs">
 	    <DependentUpon>MainPageHorizontal.View.xaml</DependentUpon>
 	  </Compile>
@@ -87,6 +91,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Platforms\Android\PlatfomPages\Views\OrientationView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\DefaultTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\SecondTheme.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\Styles\MyStyles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

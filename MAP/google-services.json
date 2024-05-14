@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1093058427573",
+    "project_id": "mapfirebase-2e39e",
+    "storage_bucket": "mapfirebase-2e39e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093058427573:android:ce67d1f9415db8efeedcfc",
+        "android_client_info": {
+          "package_name": "com.companyname.map"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1fvFSLZu-NMzhQuZd4cld8XwIXgHItyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

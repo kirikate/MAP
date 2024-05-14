@@ -10,6 +10,11 @@ namespace MAP.Services
 {
 	public class CalculatorService : ICalculatorService
 	{
+		public string DivideByZeroText  => CalculatorClass.DivideByZeroText;
+		public string BigValueText => CalculatorClass.BigValueText;
+
+		public string GetErrors(string expression) => CalculatorClass.GetErrors(expression);
+
 		public string Eval(string expression)
 		{
 			return CalculatorClass.Eval(expression);
